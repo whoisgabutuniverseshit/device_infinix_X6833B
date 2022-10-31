@@ -281,6 +281,10 @@ PRODUCT_PACKAGES += \
     SystemUIOverlay \
     TelephonyOverlay 
 
+# Lineage-Specific Overlays
+PRODUCT_PACKAGES += \
+	ApertureOverlay
+
 # Pcap
 PRODUCT_PACKAGES += \
     libpcap.vendor
