@@ -201,7 +201,7 @@ ro.vendor.tgpa_scaler_version=1
 ro.soc.manufacturer=Mediatek
 ro.vendor.mediatek.platform=MT6789
 ro.vendor.mediatek.version.branch=alps-mp-s0.mp1
-ro.vendor.mediatek.version.release=alps-mp-s0.mp1.rc-V15.102_reallytek.s0mp1rc.k61v1.64.bsp_P21
+ro.vendor.mediatek.version.release=alps-mp-s0.mp1.rc-V14.181.1_reallytek.s0mp1rc.k61v1.64.bsp_P61
 
 # Neural Networks
 debug.mtk_tflite.target_nnapi=29
