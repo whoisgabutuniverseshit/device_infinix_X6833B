@@ -88,6 +88,15 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl:64 \
     android.hardware.boot@1.2-impl.recovery
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.common@1.0.vendor \
+    android.hardware.camera.device@3.6.vendor \
+    android.hardware.camera.provider@2.6.vendor
+
+PRODUCT_PACKAGES += \
+    libdng_sdk.vendor
+    
 # CAS
 PRODUCT_PACKAGES += \
     android.hardware.cas@1.2-service-lazy
