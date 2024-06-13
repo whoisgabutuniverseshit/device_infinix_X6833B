@@ -235,6 +235,10 @@ vendor/lib64/libbluetooth_audio_session_mediatek.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
+# Chip
+vendor/bin/chipinfo
+vendor/etc/init/chipinfo_init.rc
+
 # Connectivity
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
@@ -287,6 +291,7 @@ vendor/lib/libion_ulit.so
 vendor/lib/libladder.so
 vendor/lib/libmml.so
 vendor/lib/libpqframework.so
+vendor/lib/libOpenCL.so
 vendor/lib/libudf.so
 vendor/lib/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib/vendor.mediatek.hardware.mmagent@1.1.so
@@ -352,6 +357,7 @@ vendor/lib64/libion_ulit.so
 vendor/lib64/libladder.so
 vendor/lib64/libmml.so
 vendor/lib64/libpqframework.so
+vendor/lib64/libOpenCL.so
 vendor/lib64/libudf.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
@@ -378,6 +384,29 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
+
+# DMC
+vendor/bin/dmc_core
+vendor/etc/init/dmc_core.rc
+vendor/lib/libasn1c_core.so
+vendor/lib/libasn1c_mapi.so
+vendor/lib/libasn1c_mdmi.so
+vendor/lib/libicd_decoder.so
+vendor/lib/libtranslator_mapi_v3.0.so
+vendor/lib/libtranslator_mdmi_v2.8.2.so
+vendor/lib/libtranslator_utils.so
+vendor/lib/vendor.mediatek.hardware.mdmonitor@1.0.so
+vendor/lib64/libasn1c_core.so
+vendor/lib64/libasn1c_mapi.so
+vendor/lib64/libasn1c_mdmi.so
+vendor/lib64/libicd_decoder.so
+vendor/lib64/libtranslator_mapi_v3.0.so
+vendor/lib64/libtranslator_mdmi_v2.8.2.so
+vendor/lib64/libtranslator_utils.so
+vendor/lib64/vendor.mediatek.hardware.dmc@1.0.so
+vendor/lib64/vendor.mediatek.hardware.dmc@1.1.so
+vendor/lib64/vendor.mediatek.hardware.dmc@1.2.so
+vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
 
 # DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
@@ -807,6 +836,33 @@ vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
 vendor/lib64/libformatter.so
 
+# Misc
+vendor/bin/hw/vendor.mediatek.hardware.tranHwInfo@1.0-service
+vendor/bin/fpsgo
+vendor/bin/gbe
+vendor/bin/md_monitor
+vendor/bin/meta_tst
+vendor/bin/mt6660_calibration
+vendor/bin/rt5512_calibration
+vendor/etc/init/fpsgo.rc
+vendor/etc/init/gbe.rc
+vendor/etc/init/init.otg.rc
+vendor/etc/init/md_monitor.rc
+vendor/etc/init/vendor.mediatek.hardware.tranHwInfo@1.0-service.rc
+-vendor/etc/vintf/manifest/vendor.mediatek.hardware.tranHwInfo@1.0.xml
+vendor/lib/vendor.mediatek.hardware.mdmonitor@1.0.so
+vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
+vendor/lib64/vendor.mediatek.hardware.tranHwInfo@1.0.so
+
+# MMAGENT
+vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
+vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
+vendor/lib/vendor.mediatek.hardware.mmagent@1.0.so
+vendor/lib/vendor.mediatek.hardware.mmagent@1.1.so
+vendor/lib64/libmmagent.so
+vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
+vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
+
 # Neural Networks
 vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk
 vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc
@@ -900,6 +956,8 @@ vendor/bin/hw/mtkfusionrild
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
 vendor/bin/gsm0710muxd
+vendor/etc/apdb/APDB_MT6789___W2305
+vendor/etc/apdb/APDB_MT6789___W2305_ENUM
 vendor/etc/init/gsm0710muxd.rc
 vendor/etc/init/init.cccimdinit.rc
 vendor/etc/init/init.cccirpcd.rc
@@ -993,6 +1051,10 @@ vendor/lib64/libhfmanager.so
 vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 
+# Soundtrigger
+vendor/lib/hw/sound_trigger.primary.default.so
+vendor/lib64/hw/sound_trigger.primary.default.so
+
 # TEE
 vendor/app/mcRegistry/020f0000000000000000000000000000.drbin
 vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin
@@ -1056,6 +1118,25 @@ vendor/lib/hw/android.hardware.thermal@2.0-impl.so
 vendor/lib64/hw/android.hardware.thermal@1.0-impl.so
 vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
 vendor/lib64/hw/thermal_hal.so
+
+# TNE
+vendor/bin/hw/vendor.tne@1.0-service
+vendor/etc/init/tnev.rc
+-vendor/etc/vintf/manifest/manifest_tneengine.xml
+vendor/lib64/libtneclient.so
+vendor/lib64/libtnev.so
+vendor/lib64/vendor.transsion.hardware.tne.tneengine@1.0.so
+
+# Tranlog
+vendor/bin/tranlog
+vendor/bin/tranlogconfig
+vendor/etc/init/init.tranlog.rc
+vendor/etc/init/init.tranlogconfig.rc
+vendor/lib64/libminizip.so
+vendor/lib64/libtranlog.so
+vendor/lib64/vendor.transsion.hardware.tranlog@1.0.so
+vendor/lib64/vendor.transsion.hardware.tranlogconfig@1.0.so
+
 
 # Tether Offload
 vendor/bin/hw/tetheroffloadservice

@@ -47,11 +47,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
     android.hardware.audio.effect@7.0-impl \
-    android.hardware.audio.service
+    android.hardware.audio.service \
+    android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default \
-    android.hardware.bluetooth.audio-impl
+    audio.primary.default \
+    audio.r_submix.default \
+    audio.usb.default \
+    audio_policy.stub
 
 PRODUCT_PACKAGES += \
     libaudiofoundation.vendor \
@@ -66,19 +69,28 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
-
+    
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.1.vendor
+    android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth@1.1.vendor \
+    audio.bluetooth.default \
+    libbluetooth_audio_session
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-service \
     android.hardware.boot@1.2-impl:64 \
     android.hardware.boot@1.2-impl.recovery
+
+# CAS
+PRODUCT_PACKAGES += \
+    android.hardware.cas@1.2-service-lazy
 
 # Dalvik configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -203,7 +215,8 @@ PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
     libstagefright_softomx_plugin.vendor \
     libsfplugin_ccodec_utils.vendor \
-    libcodec2_soft_common.vendor
+    libcodec2_soft_common.vendor \
+    libflatbuffers-cpp.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
@@ -212,6 +225,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/seccomp,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy) \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
+
+# Misc
+PRODUCT_PACKAGES += \
+    libchrome.vendor \
+    libruy.vendor \
+    libpcap.vendor \
+    libtextclassifier_hash.vendor
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -234,6 +254,10 @@ PRODUCT_PACKAGES += \
     SettingsResOverlay \
     SystemUIOverlay \
     TelephonyOverlay 
+
+# Pcap
+PRODUCT_PACKAGES += \
+    libpcap.vendor
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -286,10 +310,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service-mediatek \
     android.hardware.power-V2-ndk.vendor \
-    android.hardware.power@1.2.vendor \
+    android.hardware.power@1.3.vendor \
     libmtkperf_client_vendor \
-    vendor.mediatek.hardware.mtkpower@1.0.vendor \
-    vendor.mediatek.hardware.mtkpower@1.1.vendor \
     vendor.mediatek.hardware.mtkpower@1.2.vendor
 
 PRODUCT_COPY_FILES += \
