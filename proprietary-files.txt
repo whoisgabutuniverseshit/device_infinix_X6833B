@@ -1,4 +1,4 @@
-## x6833b package version: X6833B-H894DEFGHI-T-GL-240103V3275, unless stated otherwise
+## x6833b package version: X6833B-H894DEFGHI-T-GL-230817V2345, unless stated otherwise
 
 # AEE
 vendor/lib/libaedv.so
@@ -1205,10 +1205,7 @@ system_ext/lib64/vendor.transsion.hardware.trancam.trancamserver@1.0.so
 vendor/bin/hw/vendor.transsion.hardware.trancam.trancamserver@1.0-service
 vendor/etc/init/vendor.transsion.hardware.trancam.trancamserver@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.transsion.hardware.trancam.trancamserver@1.0.xml
-vendor/etc/trancam_filelock.json
 vendor/lib/vendor.transsion.hardware.trancam.trancamserver@1.0.so
-vendor/lib64/libtrancamJsonConvertor.so
-vendor/lib64/libtrancam_filelockmgr.so
 vendor/lib64/vendor.transsion.hardware.trancam.trancamserver@1.0.so
 
 # Camera - Required blobs
@@ -1282,7 +1279,6 @@ vendor/lib/libJpgEncPipe.so
 vendor/lib/libNoFpsActor.so
 vendor/lib/librgbwlightsensor.so
 vendor/lib/libSQLiteModule_VER_ALL.so
-vendor/lib/libTransNS.so
 vendor/lib64/libaal_cust.so
 vendor/lib64/libaal_key.so
 vendor/lib64/libaal_mtk.so
@@ -2044,7 +2040,6 @@ vendor/lib/mt6789/libvpudv3a_vcodec.so
 vendor/lib/libvcodecdrv_header_stub.so
 vendor/lib/libvcodec_oal.so
 vendor/lib/libvcodec_utility_plat.mt6789.so
-vendor/lib/libvcodec_utility_plat.mt6895.so
 vendor/lib/libvcodec_utility_plat.mt6983.so
 vendor/lib/libvpu5.so
 vendor/lib/libvpud_vcodec.so
