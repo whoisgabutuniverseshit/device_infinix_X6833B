@@ -1,4 +1,4 @@
-## x6833b package version: X6833B-H894DEFGHI-T-GL-240220V2607, unless stated otherwise
+## x6833b package version: X6833B-H894DEFGHI-T-GL-240220V3535, unless stated otherwise
 
 # AEE
 vendor/lib/libaedv.so
@@ -1205,7 +1205,10 @@ system_ext/lib64/vendor.transsion.hardware.trancam.trancamserver@1.0.so
 vendor/bin/hw/vendor.transsion.hardware.trancam.trancamserver@1.0-service
 vendor/etc/init/vendor.transsion.hardware.trancam.trancamserver@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.transsion.hardware.trancam.trancamserver@1.0.xml
+vendor/etc/trancam_filelock.json
 vendor/lib/vendor.transsion.hardware.trancam.trancamserver@1.0.so
+vendor/lib64/libtrancamJsonConvertor.so
+vendor/lib64/libtrancam_filelockmgr.so
 vendor/lib64/vendor.transsion.hardware.trancam.trancamserver@1.0.so
 
 # Camera - Required blobs
@@ -1260,6 +1263,8 @@ vendor/lib/libasn1c_core.so
 vendor/lib/libasn1c_mapi.so
 vendor/lib/libasn1c_mdmi.so
 vendor/lib/libAVCSecureVencCA.so
+vendor/lib/libformatter.so
+vendor/lib/libfp_ext_svc2.so
 vendor/lib/libFrameRecord.so
 vendor/lib/libh264dec_customize.so
 vendor/lib/libh264dec_sa.ca7.so
@@ -1276,9 +1281,21 @@ vendor/lib/libispcameraca.so
 vendor/lib/libjpeg-alpha-oal_vendor.so
 vendor/lib/libjpeg-alpha_vendor.so
 vendor/lib/libJpgEncPipe.so
+vendor/lib/libladder.so
+vendor/lib/libmp3dec_mtk.so
+vendor/lib/libmp4enc_sa.ca7.so
+vendor/lib/libmp4enc_xa.ca7.so
+vendor/lib/libmsbc_mtk.so
+vendor/lib/libmvpuop_mtk_cv.so
+vendor/lib/libmvpuop_mtk_nn.so
 vendor/lib/libNoFpsActor.so
+vendor/lib/libshmemcompat.so
+vendor/lib/libshmemutil.so
 vendor/lib/librgbwlightsensor.so
 vendor/lib/libSQLiteModule_VER_ALL.so
+vendor/lib/libvp8dec_sa.ca7.so
+vendor/lib/libvp8enc_sa.ca7.so
+vendor/lib/libvp9dec_sa.ca7.so
 vendor/lib64/libaal_cust.so
 vendor/lib64/libaal_key.so
 vendor/lib64/libaal_mtk.so
@@ -1290,15 +1307,21 @@ vendor/lib64/libanc_hdr.so
 vendor/lib64/libanc_hdr_adapter_hi1631q_17201701_front_g97.so
 vendor/lib64/libanc_hdr_adapter_hi1634q_17201821_front_g97.so
 vendor/lib64/libanc_hdr_adapter_ov64b40_17201840_back_g97.so
+vendor/lib64/libAVCSecureVencCA.so
+vendor/lib64/libBasicModule.so
+vendor/lib64/libcapctrl.so
 vendor/lib64/libcolorlevel.so
 vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libdre.so
 vendor/lib64/libdynamiclog.so
+vendor/lib64/libfeaturepolicy.so
 vendor/lib64/libfp_ext_svc2.so
 vendor/lib64/libFrameRecord.so
 vendor/lib64/libhdrvideo.so
 vendor/lib64/libheichal.so
 vendor/lib64/libhevce_sb.ca7.android.so
+vendor/lib64/libhfmanager.so
+vendor/lib64/libhfmanagerwrapper.so
 vendor/lib64/libhydra.so
 vendor/lib64/libhyperion_hap_ca.so
 vendor/lib64/libicd_decoder.so
@@ -1312,9 +1335,10 @@ vendor/lib64/libJpgEncPipe.so
 vendor/lib64/libNoFpsActor.so
 vendor/lib64/libNvLutEffect_arm64-v8a.so
 vendor/lib64/librgbwlightsensor.so
+vendor/lib64/libshmemcompat.so
+vendor/lib64/libshmemutil.so
 vendor/lib64/libSQLiteModule_VER_ALL.so
 vendor/lib64/libTranAutoColorLevel.so
-vendor/lib64/libtrancam_filelockmgr.so
 vendor/lib64/mt6789/fake_serial_yuv_IdxMgr.so
 vendor/lib64/mt6789/fake_serial_yuv_tuning.so
 vendor/lib64/mt6789/gc02m1_mipi_raw_IdxMgr.so
@@ -1346,6 +1370,7 @@ vendor/lib64/mt6789/lib3a.sensors.color.so
 vendor/lib64/mt6789/lib3a.sensors.flicker.so
 vendor/lib64/mt6789/libaaa_ltm.so
 vendor/lib64/mt6789/libaaa_ltmx.so
+vendor/lib64/mt6789/libaalservice.so
 vendor/lib64/mt6789/libaal_cust_func.so
 vendor/lib64/mt6789/libacdk.so
 vendor/lib64/mt6789/libaiawb_moon.so
@@ -1356,6 +1381,7 @@ vendor/lib64/mt6789/libaibc_tuning_p2.so
 vendor/lib64/mt6789/libaibc_tuning_p3.so
 vendor/lib64/mt6789/libaibc_tuning_p4.so
 vendor/lib64/mt6789/libaidepth_tuning.so
+vendor/lib64/mt6789/libaiselector.so
 vendor/lib64/mt6789/libamipengine.so
 vendor/lib64/mt6789/libanc_dc_base.so
 vendor/lib64/mt6789/libarcsoft_beautyshot.so
@@ -1369,6 +1395,7 @@ vendor/lib64/mt6789/libcolorenhance_64.so
 vendor/lib64/mt6789/libdenoise.so
 vendor/lib64/mt6789/libdip_drv.so
 vendor/lib64/mt6789/libdip_postproc.so
+vendor/lib64/mt6789/libdpframework.so
 vendor/lib64/mt6789/libDR.so
 vendor/lib64/mt6789/libeffecthal.base.so
 vendor/lib64/mt6789/libeffect_hal.so
@@ -1382,6 +1409,7 @@ vendor/lib64/mt6789/libfeature_3dnr.so
 vendor/lib64/mt6789/libfeature_fsc.so
 vendor/lib64/mt6789/libfeature_lmv.so
 vendor/lib64/mt6789/libfeature_rss.so
+vendor/lib64/mt6789/libgpudataproducer.so
 vendor/lib64/mt6789/libImageEval.so
 vendor/lib64/mt6789/libimageio.so
 vendor/lib64/mt6789/libimageio_plat_drv.so
@@ -1392,7 +1420,11 @@ vendor/lib64/mt6789/libmnl.so
 vendor/lib64/mt6789/libmorpho_video_stabilizer.so
 vendor/lib64/mt6789/libmpbase.so
 vendor/lib64/mt6789/libmsnr.so
+vendor/lib64/mt6789/libnir_neon_driver.so
 vendor/lib64/mt6789/libportrait_repair_ppl3_ocl.so
+vendor/lib64/mt6789/libpqparamparser.so
+vendor/lib64/mt6789/libpq_cust_base.so
+vendor/lib64/mt6789/libpq_prot.so
 vendor/lib64/mt6789/libsdk_sr.so
 vendor/lib64/mt6789/libsegmention.so
 vendor/lib64/mt6789/libsegmentionPre.so
@@ -1942,6 +1974,12 @@ vendor/etc/security/cacerts/f459871d.0
 vendor/etc/security/cacerts/fb5fa911.0
 vendor/etc/security/cacerts/fd08c599.0
 vendor/etc/security/cacerts/fde84897.0
+vendor/etc/security/cacerts_supl/111e6273.0
+vendor/etc/security/cacerts_supl/3ad48a91.0
+vendor/etc/security/cacerts_supl/7651b327.0
+vendor/etc/security/cacerts_supl/c542733d.0
+vendor/etc/security/cacerts_supl/cec771d5.0
+vendor/etc/security/cacerts_supl/f336e3d1.0
 vendor/etc/security/cacerts_supl/lab/18dc3a8d.0
 vendor/etc/security/cacerts_supl/lab/1bc5ca0c.0
 vendor/etc/security/cacerts_supl/lab/1bc5ca0c.1
@@ -1956,12 +1994,6 @@ vendor/etc/security/cacerts_supl/lab/b5805141.0
 vendor/etc/security/cacerts_supl/lab/b805b58a.0
 vendor/etc/security/cacerts_supl/lab/ed7b215e.0
 vendor/etc/security/cacerts_supl/lab/ef4b31e6.0
-vendor/etc/security/cacerts_supl/111e6273.0
-vendor/etc/security/cacerts_supl/3ad48a91.0
-vendor/etc/security/cacerts_supl/7651b327.0
-vendor/etc/security/cacerts_supl/c542733d.0
-vendor/etc/security/cacerts_supl/cec771d5.0
-vendor/etc/security/cacerts_supl/f336e3d1.0
 -vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk.xml
 -vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/etc/slp_conf
@@ -2160,6 +2192,25 @@ vendor/lib/vendor.mediatek.hardware.mmagent@1.1.so
 vendor/lib64/libmmagent.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
+
+# Missing blobs (will arrange it later)
+vendor/lib/libmtkhardware_legacy.so
+vendor/lib64/libmtkhardware_legacy.so
+vendor/lib/libmtk_bsg.so
+vendor/lib64/libmtk_bsg.so
+vendor/lib/libminiui.so
+vendor/lib/vendor.mediatek.hardware.mdmonitor@1.0.so
+vendor/lib/mt6789/libmtk_drvb.so
+vendor/lib64/mt6789/libmtk_drvb.so
+vendor/lib64/libheichal.so
+vendor/lib64/libimagebuffer_wrapper.so
+vendor/lib64/libminiui.so
+vendor/lib64/libmtkisp_metadata.so
+vendor/lib64/libmtkisp_metadata_v2.so
+vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
+vendor/lib/libpixelflinger.so
+vendor/lib64/libcolorlevel.so
+vendor/lib64/libpixelflinger.so
 
 # Neural Networks
 vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk
