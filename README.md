@@ -23,3 +23,4 @@
 ## Device Picture
 
 ![Infinix Note 30](https://fdn2.gsmarena.com/vv/pics/infinix/infinix-note30-4g-1.jpg)
+# vendor_infinix_X6833B
