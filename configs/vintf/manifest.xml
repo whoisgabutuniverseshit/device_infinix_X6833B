@@ -310,6 +310,15 @@
         </interface>
         <fqname>@1.1::IISPModule/internal/0</fqname>
     </hal>
+	<hal format="hidl">
+        <name>android.hardware.camera.provider</name>
+        <transport>hwbinder</transport>
+        <version>2.6</version>
+        <interface>
+            <name>ICameraProvider</name>
+            <instance>internal/0</instance>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.composer_ext</name>
         <transport>hwbinder</transport>

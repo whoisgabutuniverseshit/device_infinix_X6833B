@@ -1494,6 +1494,10 @@ vendor/lib64/mt6789/pbrohi1634q_mipi_raw_tuning.so
 vendor/lib64/mt6789/pbroov64b40_mipi_raw_IdxMgr.so
 vendor/lib64/mt6789/pbroov64b40_mipi_raw_tuning.so
 
+# Charger
+bin/kpoc_charger
+etc/init/kpoc_charger.rc
+
 # Chip
 vendor/bin/chipinfo
 vendor/etc/init/chipinfo_init.rc
