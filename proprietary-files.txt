@@ -230,6 +230,7 @@ vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 # Camera
 vendor/lib/hw/mt6789/vendor.mediatek.hardware.camera.atms@1.0-impl.so
 vendor/lib/hw/mt6789/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so
+-vendor/etc/vintf/manifest/manifest_cameraprovider.xml
 vendor/lib/libcam3_transerverengine.so
 vendor/lib/libcamalgo.utility.so
 vendor/lib/libCamera_hi1631qmipiraw_360HDR.so
