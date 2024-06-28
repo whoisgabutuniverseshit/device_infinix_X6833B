@@ -1,11 +1,54 @@
+# ADB
+persist.adb.nonblocking_ffs=0
+
+# AEE
+ro.vendor.have_aee_feature=1
+persist.vendor.mtk.aee.filter=0
+
+# AF
+vendor.af.dynamic.sleeptime.enable=true
+vendor.af.pausewait.enable=false
+vendor.af.threshold.src_and_effect_count=5
+
+# APK Verity
+ro.apk_verity.mode=2
+
+# ART 
+dalvik.vm.dex2oat-minidebuginfo=false
+dalvik.vm.minidebuginfo=false
+
 # Audio
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
 
 # Bluetooth
+bluetooth.profile.asha.central.enabled=true
+bluetooth.device.class_of_device=90,2,12
+bluetooth.profile.a2dp.source.enabled=true
+bluetooth.profile.avrcp.target.enabled=true
+bluetooth.profile.bas.client.enabled=true
+bluetooth.profile.gatt.enabled=true
+bluetooth.profile.hfp.ag.enabled=true
+bluetooth.profile.hid.device.enabled=true
+bluetooth.profile.hid.host.enabled=true
+bluetooth.profile.map.server.enabled=true
+bluetooth.profile.opp.enabled=true
+bluetooth.profile.pan.nap.enabled=true
+bluetooth.profile.pan.panu.enabled=true
+bluetooth.profile.pbap.server.enabled=true
+bluetooth.profile.bap.unicast.client.enabled=?false
+bluetooth.profile.ccp.server.enabled=?false
+bluetooth.profile.csip.set_coordinator.enabled=?false
+bluetooth.profile.mcp.server.enabled=?false
+bluetooth.profile.sap.server.enabled=?true
+bluetooth.profile.vcp.controller.enabled=?false
 persist.bluetooth.a2dp_offload.cap=sbc-aac
 persist.bluetooth.a2dp_offload.disabled=true
-ro.bluetooth.a2dp_offload.supported=true
+persist.vendor.bluetooth.leaudio_mode=ums
+vendor.bluetooth.ldac.abr=true
+ro.vendor.mtk.bt_sap_enable=true
+ro.vendor.bluetooth.a2dp_aac_vbr.is_disabled=true
+ro.vendor.bluetooth.bt_multidevice_perform=600
 ro.vendor.bt.platform=connac1x
 ro.vendor.mtk.bt_sap_enable=true
 
@@ -59,6 +102,9 @@ ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.vendor.mtk_ovl_bringup=0
 ro.vendor.mtk_pq_support=2
+
+# Fuse passthrough
+persist.sys.fuse.passthrough.enable=true
 
 # Gatekeeper
 ro.hardware.gatekeeper=trustonic
@@ -116,6 +162,15 @@ persist.vendor.volte_support=1
 ro.vendor.md_auto_setup_ims=1
 ro.vendor.mtk_data_config=1
 
+# LMK
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=100
+ro.lmk.psi_complete_stall_ms=150
+ro.lmk.swap_free_low_percentage=20
+ro.lmk.swap_util_max=90
+ro.lmk.thrashing_limit=25
+ro.lmk.thrashing_limit_decay=50
+
 # Media
 debug.mediatek.disp_decompress=1
 debug.stagefright.c2inputsurface=-1
@@ -126,6 +181,12 @@ ro.vendor.mtk_sec_video_path_support=1
 ro.vendor.mtk_video_hevc_enc_support=1
 vendor.mtk.vdec.waitkeyframeforplay=9
 
+# MediaTek
+ro.soc.manufacturer=Mediatek
+ro.vendor.mediatek.platform=MT6789
+ro.vendor.mediatek.version.branch=alps-mp-s0.mp1
+ro.vendor.mediatek.version.release=alps-mp-s0.mp1.rc-V14.181.1_reallytek.s0mp1rc.k61v1.64.bsp_P24
+
 # Neural Networks
 debug.mtk_tflite.target_nnapi=29
 ro.vendor.mtk_nn.option=A,B,C,D,E,F,G,Z
@@ -133,8 +194,24 @@ ro.vendor.mtk_nn_baseline_support=1
 ro.vendor.mtk_nn_quant_preferred=1
 ro.vendor.mtk_nn_support=1
 
+# Perf
+persist.vendor.iomanager.dirty=1
+persist.vendor.iomanager.switch=1
+persist.vendor.pnpmgr.enable=1
+persist.vendor.pnpmgr.gamemode.enable=1
+persist.vendor.pnpmgr.gamerecord.enable=1
+ro.vendor.transched.support=1
+ro.vendor.powerhal.gsi_watermark=500
+ro.vendor.powerhal_fling_mode_support=1
+
 # Sensors
 ro.vendor.mtk.sensor.support=yes
+
+# Shutdown
+init.userspace_reboot.is_supported=true
+
+# USB
+ro.vendor.usb.kpoc_adb=0
 
 # TEE
 ro.vendor.mtk_trustonic_tee_support=1
