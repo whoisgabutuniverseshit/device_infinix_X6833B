@@ -90,8 +90,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0.vendor \
-    libdrm.vendor \
-    libutils-v32
+    libdrm.vendor 
 
 # DRM
 PRODUCT_PACKAGES += \
