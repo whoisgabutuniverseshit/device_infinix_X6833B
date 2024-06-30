@@ -2021,7 +2021,6 @@ vendor/lib/mt6789/libvpudv3a_vcodec.so
 vendor/lib/libvcodecdrv_header_stub.so
 vendor/lib/libvcodec_oal.so
 vendor/lib/libvcodec_utility_plat.mt6789.so
-vendor/lib/libvcodec_utility_plat.mt6895.so
 vendor/lib/libvcodec_utility_plat.mt6983.so
 vendor/lib/libvpu5.so
 vendor/lib/libvpud_vcodec.so
@@ -2182,17 +2181,14 @@ vendor/lib/libmtk_bsg.so
 vendor/lib64/libmtk_bsg.so
 vendor/lib/libminiui.so
 vendor/lib64/libTranAutoColorLevel.so
-vendor/lib64/libaipe_bokeh.so
 vendor/lib64/libheichal.so
 vendor/lib64/libimagebuffer_wrapper.so
 vendor/lib64/libminiui.so
 vendor/lib64/libmtkisp_metadata.so
 vendor/lib64/libmtkisp_metadata_v2.so
 vendor/lib/libpixelflinger.so
-vendor/lib64/libTranExtImgThread.so
 vendor/lib64/libcolorlevel.so
 vendor/lib64/libpixelflinger.so
-vendor/lib64/libyuvenhance.so
 
 # NFC
 vendor/bin/hw/android.hardware.nfc@1.2-service
@@ -2240,17 +2236,19 @@ vendor/etc/init/init.fpsgo.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
 vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
+vendor/lib/libmtkperf_client_vendor.so
 vendor/lib/libperfctl_vendor.so
 vendor/lib/libpower_timer.so
 vendor/lib/libpowerhal.so
 vendor/lib/libpowerhalwrap_vendor.so
 vendor/lib/vendor.mediatek.hardware.power@2.0.so
 vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
+vendor/lib64/android.hardware.power-service-mediatek.so
+vendor/lib64/libmtkperf_client_vendor.so
 vendor/lib64/libperfctl_vendor.so
 vendor/lib64/libpower_timer.so
 vendor/lib64/libpowerhal.so
 vendor/lib64/libpowerhalwrap_vendor.so
-vendor/lib64/libtranlog.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 
 # Radio
